@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard — URL Phishing Detection</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="brand">
+                <div class="logo-icon">🛡️</div>
+                <div>
+                    <h1>PhishGuard</h1>
+                    <p class="subtitle">Real-Time URL Phishing Detection System</p>
+                </div>
+            </div>
+            <div class="status-badges">
+                <span id="backendBadge" class="badge badge-success">Backend: Online</span>
+                <span id="mlBadge" class="badge badge-neutral">ML Service: Checking...</span>
+            </div>
+        </header>
+
+        <!-- Notification Banner -->
+        <div id="alertBox" class="alert hidden"></div>
+
+        <!-- Scanner Card -->
+        <section class="card">
+            <h2 class="card-title">Analyze Website URL</h2>
+            <p class="card-subtitle">Enter any URL to extract lexical features and predict security risk.</p>
+            
+            <form id="scanForm" class="scan-form">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="urlInput" 
+                        placeholder="e.g. https://example.com or http://suspicious-login-update.com" 
+                        required 
+                        autocomplete="off"
+                    />
+                    <button type="submit" id="scanButton" class="btn btn-primary">
+                        <span id="scanBtnText">Scan URL</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Quick Samples -->
+            <div class="samples">
+                <span class="samples-label">Quick Test:</span>
+                <button type="button" class="sample-btn" data-url="https://www.google.com">Google (Safe)</button>
+                <button type="button" class="sample-btn" data-url="https://github.com">GitHub (Safe)</button>
+                <button type="button" class="sample-btn" data-url="http://paypal-security-update.com/login">PayPal Phish</button>
+                <button type="button" class="sample-btn" data-url="http://192.168.1.1/admin/login.php">IP Phish</button>
+            </div>
+        </section>
+
+        <!-- Result Box (Hidden by default, shown after scanning) -->
+        <section id="resultCard" class="card result-card hidden">
+            <div class="result-header">
+                <div>
+                    <span id="verdictBadge" class="verdict-badge">SAFE</span>
+                    <h3 id="resultTitle" class="result-title">Analysis Verdict</h3>
+                </div>
+                <div class="result-confidence">
+                    <span class="confidence-label">Confidence</span>
+                    <span id="confidenceValue" class="confidence-number">98.5%</span>
+                </div>
+            </div>
+
+            <div class="result-url-box">
+                <span class="url-label">Analyzed URL:</span>
+                <span id="resultUrl" class="url-text"></span>
+            </div>
+
+            <!-- Key Indicator Highlights -->
+            <div class="indicators-grid">
+                <div class="indicator-item">
+                    <span class="ind-name">URL Length</span>
+                    <span id="indLength" class="ind-value">-</span>
+                </div>
+                <div class="indicator-item">
+                    <span class="ind-name">Has IP Address</span>
+                    <span id="indIp" class="ind-value">-</span>
+                </div>
+                <div class="indicator-item">
+                    <span class="ind-name">HTTPS Secure</span>
+                    <span id="indHttps" class="ind-value">-</span>
+                </div>
+                <div class="indicator-item">
+                    <span class="ind-name">Subdomain Count</span>
+                    <span id="indSubdomains" class="ind-value">-</span>
+                </div>
+            </div>
+
+            <p class="disclaimer">
+                Inference produced by trained Random Forest Classifier evaluating 23 lexical URL signals.
+            </p>
+        </section>
+
+        <!-- Dashboard Stats Row -->
+        <section class="stats-row">
+            <div class="stat-card">
+                <span class="stat-num" id="statTotal">0</span>
+                <span class="stat-label">Total Scans</span>
+            </div>
+            <div class="stat-card stat-card-danger">
+                <span class="stat-num" id="statPhishing">0</span>
+                <span class="stat-label">Phishing Detected</span>
+            </div>
+            <div class="stat-card stat-card-success">
+                <span class="stat-num" id="statLegitimate">0</span>
+                <span class="stat-label">Legitimate URLs</span>
+            </div>
+        </section>
+
+        <!-- History Table Card -->
+        <section class="card">
+            <div class="card-header-flex">
+                <h2 class="card-title">Recent Scan History</h2>
+                <button type="button" id="refreshBtn" class="btn btn-secondary">Refresh</button>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Target URL</th>
+                            <th>Verdict</th>
+                            <th>Confidence</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyBody">
+                        <tr>
+                            <td colspan="5" class="text-center text-muted">Loading scan history...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>PhishGuard • Spring Boot MVC Backend with MySQL & Machine Learning</p>
+        </footer>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

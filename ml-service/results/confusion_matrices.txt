@@ -1,0 +1,15 @@
+PhishGuard Confusion Matrices
+========================================
+
+Model: Logistic Regression
+[[TN=76994, FP=1585],
+ [FN=12794, TP=10066]]
+
+Model: Decision Tree
+[[TN=75921, FP=2658],
+ [FN=5318, TP=17542]]
+
+Model: Random Forest
+[[TN=77138, FP=1441],
+ [FN=5492, TP=17368]]
+

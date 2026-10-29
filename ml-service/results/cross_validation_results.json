@@ -1,0 +1,35 @@
+{
+  "Logistic Regression": {
+    "accuracy_mean": 0.8565478439882724,
+    "accuracy_std": 0.0007883190469512677,
+    "precision_mean": 0.8582173998203843,
+    "precision_std": 0.0012921049568628165,
+    "recall_mean": 0.43534896663919087,
+    "recall_std": 0.003375297089122466,
+    "f1_mean": 0.5776595906360742,
+    "f1_std": 0.003221831755189588,
+    "cv_time_sec": 2.46
+  },
+  "Decision Tree": {
+    "accuracy_mean": 0.9199116693477096,
+    "accuracy_std": 0.0004971835104094391,
+    "precision_mean": 0.8640998872573421,
+    "precision_std": 0.0029643829419840526,
+    "recall_mean": 0.7649310747931267,
+    "recall_std": 0.003304752226149083,
+    "f1_mean": 0.8114865282162631,
+    "f1_std": 0.0012968435311289852,
+    "cv_time_sec": 8.24
+  },
+  "Random Forest": {
+    "accuracy_mean": 0.9307163016803077,
+    "accuracy_std": 0.0008482512544219688,
+    "precision_mean": 0.9174805202410973,
+    "precision_std": 0.002434142145097602,
+    "recall_mean": 0.7610048840445772,
+    "recall_std": 0.003298796140690248,
+    "f1_mean": 0.8319438080236072,
+    "f1_std": 0.0022248585373998548,
+    "cv_time_sec": 28.32
+  }
+}

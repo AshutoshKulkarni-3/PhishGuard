@@ -1,0 +1,4 @@
+model,accuracy,precision,recall,f1_score,true_negatives,false_positives,false_negatives,true_positives,false_negative_rate,false_positive_rate,train_time_sec,pred_time_sec
+Logistic Regression,0.85825,0.86396,0.44033,0.58335,76994,1585,12794,10066,0.55967,0.02017,0.525,0.007
+Decision Tree,0.92137,0.86842,0.76737,0.81477,75921,2658,5318,17542,0.23263,0.03383,2.02,0.013
+Random Forest,0.93165,0.92339,0.75976,0.83362,77138,1441,5492,17368,0.24024,0.01834,6.744,0.174

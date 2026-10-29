@@ -1,0 +1,164 @@
+{
+  "Logistic Regression": {
+    "accuracy": 0.8582497855854258,
+    "precision": 0.8639601750922667,
+    "recall": 0.44033245844269464,
+    "f1_score": 0.5833502361565878,
+    "confusion_matrix": {
+      "tn": 76994,
+      "fp": 1585,
+      "fn": 12794,
+      "tp": 10066,
+      "matrix_2x2": [
+        [
+          76994,
+          1585
+        ],
+        [
+          12794,
+          10066
+        ]
+      ]
+    },
+    "fpr": 0.020170783542676797,
+    "fnr": 0.5596675415573054,
+    "train_time_sec": 0.525,
+    "test_pred_time_sec": 0.007,
+    "test_sample_count": 101439,
+    "classification_report": {
+      "Legitimate (0)": {
+        "precision": 0.8575087985031408,
+        "recall": 0.9798292164573232,
+        "f1-score": 0.9145972785640891,
+        "support": 78579.0
+      },
+      "Phishing (1)": {
+        "precision": 0.8639601750922667,
+        "recall": 0.44033245844269464,
+        "f1-score": 0.5833502361565878,
+        "support": 22860.0
+      },
+      "accuracy": 0.8582497855854258,
+      "macro avg": {
+        "precision": 0.8607344867977038,
+        "recall": 0.7100808374500089,
+        "f1-score": 0.7489737573603384,
+        "support": 101439.0
+      },
+      "weighted avg": {
+        "precision": 0.8589626620943376,
+        "recall": 0.8582497855854258,
+        "f1-score": 0.839948402003442,
+        "support": 101439.0
+      }
+    }
+  },
+  "Decision Tree": {
+    "accuracy": 0.9213714646240598,
+    "precision": 0.8684158415841584,
+    "recall": 0.7673665791776028,
+    "f1_score": 0.8147700882489549,
+    "confusion_matrix": {
+      "tn": 75921,
+      "fp": 2658,
+      "fn": 5318,
+      "tp": 17542,
+      "matrix_2x2": [
+        [
+          75921,
+          2658
+        ],
+        [
+          5318,
+          17542
+        ]
+      ]
+    },
+    "fpr": 0.033825831328981024,
+    "fnr": 0.2326334208223972,
+    "train_time_sec": 2.02,
+    "test_pred_time_sec": 0.013,
+    "test_sample_count": 101439,
+    "classification_report": {
+      "Legitimate (0)": {
+        "precision": 0.9345388298723519,
+        "recall": 0.966174168671019,
+        "f1-score": 0.9500932310503197,
+        "support": 78579.0
+      },
+      "Phishing (1)": {
+        "precision": 0.8684158415841584,
+        "recall": 0.7673665791776028,
+        "f1-score": 0.8147700882489549,
+        "support": 22860.0
+      },
+      "accuracy": 0.9213714646240598,
+      "macro avg": {
+        "precision": 0.9014773357282552,
+        "recall": 0.8667703739243109,
+        "f1-score": 0.8824316596496373,
+        "support": 101439.0
+      },
+      "weighted avg": {
+        "precision": 0.9196375442497797,
+        "recall": 0.9213714646240598,
+        "f1-score": 0.9195971985141237,
+        "support": 101439.0
+      }
+    }
+  },
+  "Random Forest": {
+    "accuracy": 0.9316535060479697,
+    "precision": 0.9233877399117444,
+    "recall": 0.7597550306211723,
+    "f1_score": 0.8336173174302239,
+    "confusion_matrix": {
+      "tn": 77138,
+      "fp": 1441,
+      "fn": 5492,
+      "tp": 17368,
+      "matrix_2x2": [
+        [
+          77138,
+          1441
+        ],
+        [
+          5492,
+          17368
+        ]
+      ]
+    },
+    "fpr": 0.018338232861197012,
+    "fnr": 0.24024496937882764,
+    "train_time_sec": 6.744,
+    "test_pred_time_sec": 0.174,
+    "test_sample_count": 101439,
+    "classification_report": {
+      "Legitimate (0)": {
+        "precision": 0.9335350357013191,
+        "recall": 0.981661767138803,
+        "f1-score": 0.956993716231724,
+        "support": 78579.0
+      },
+      "Phishing (1)": {
+        "precision": 0.9233877399117444,
+        "recall": 0.7597550306211723,
+        "f1-score": 0.8336173174302239,
+        "support": 22860.0
+      },
+      "accuracy": 0.9316535060479697,
+      "macro avg": {
+        "precision": 0.9284613878065318,
+        "recall": 0.8707083988799877,
+        "f1-score": 0.895305516830974,
+        "support": 101439.0
+      },
+      "weighted avg": {
+        "precision": 0.9312482704359905,
+        "recall": 0.9316535060479697,
+        "f1-score": 0.9291899674112281,
+        "support": 101439.0
+      }
+    }
+  }
+}
